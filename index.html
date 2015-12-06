@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" type="text/css" href="stylesheet.css">
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+      <link href='https://fonts.googleapis.com/css?family=Palanquin+Dark' rel='stylesheet' type='text/css'>
+      <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+      <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+      html { height: 98% }
+      body { height: 90%; margin: 2; padding: 0 }
+      #map-canvas { height: 100% }
+</style>
+    <script type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDShQG3be2FGulDqB_uBkPbNqtogueWnEA&callback=initMap">
+    </script>
+    <script type="text/javascript">
+      function initialize() {
+
+      var myLatlng1 = new google.maps.LatLng(37.775231, -122.417528);
+      var myLatlng2 = new google.maps.LatLng(37.772123, -122.405293);
+      var myLatlng3 = new google.maps.LatLng(37.772996, -122.403742);
+      var myLatlng4 = new google.maps.LatLng(37.776501, -122.392064);
+      var myLatlng5 = new google.maps.LatLng(37.762385, -122.414601);
+      var myLatlng6 = new google.maps.LatLng(37.784318, -122.395144);
+    var myLatlng7 = new google.maps.LatLng(37.792808, -122.401724);
+    var myLatlng8 = new google.maps.LatLng(37.800322, -122.449951);
+    var myLatlng9 = new google.maps.LatLng(37.786501, -122.405296);
+    var myLatlng10 = new google.maps.LatLng(37.768921, -122.402561);
+          
+var mapOptions = {
+  zoom: 14,
+  center: myLatlng1  
+};
+
+ var map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+
+         var image1 = 'uber_logo.png';
+         var image2 = 'airbnb.png';
+         var image3 = 'pinterest-logo.png';
+         var image4 = 'dropbox.png';
+          var image5 = 'stripe.png';
+          var image6 = 'zenefits.png';
+          var image7 = 'cloudera.jpg';
+          var image8 = 'sofi.png';
+          var image9 = 'CreditKarma.png';
+          var image10 = 'jawbone.jpg';
+        
+
+var contentString1 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#1 Uber</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="Uber2.jpg" style="max-width: 220px; float: right;">'+
+      '<p>Uber is a mobile application that allows subscribers to get a car service from cell phones. Users can request a car by telling the company a location, via texting an address or using iPhone or Android apps to set a pickup location on a map. Uber will send the nearest driver for pick up, and text message an estimated arrival time. When the ride is over, Uber will automatically charge the users credit card on file.</p>'+
+'<p>Current Valuation = $51 billion</p>'+
+'<p>#1 Startup Valuation in San Francisco, CA</p>'+
+'<p>#1 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+
+var contentString2 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#2 Airbnb</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="airbnb2.jpg" style="max-width: 220px; float: right;">'+
+      '<p>Airbnb is a community marketplace for people to list, discover, and book accommodations around the world online or from a mobile phone. Whether an apartment for a night, a castle for a week, or a villa for a month, Airbnb connects people to travel experiences, at any price point. And with world-class customer service and a growing community of users, Airbnb is an easy way for people to monetize extra space and showcase it to an audience of millions.</p>'+
+'<p>Current Valuation = $25.5 billion</p>'+
+'<p>#2 Startup Valuation in San Francisco, CA</p>'+
+'<p>#3 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+          
+var contentString3 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#3 Pinterest</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="pinterest2.jpg" style="max-width: 220px; float: right;">'+
+      '<p>Pinterest is a place to discover ideas for projects and interests, hand-picked by people. Discover and save creative ideas for cooking, travel, home improvement and more.</p>'+
+'<p>Current Valuation = $11 billion</p>'+
+'<p>#3 Startup Valuation in San Francisco, CA</p>'+
+'<p>#9 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+          
+var contentString4 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#4 Dropbox</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="dropbox2.jpg" style="max-width: 220px; float: right;">'+
+      '<p>Dropbox, founded by Drew Houston and Arash Ferdowsi (MIT engineers) in 2007, is a cross-platform cloud storage solution, with support for Windows, Mac OS X and Linux. Files in a users Dropbox folder are continuously kept in sync between the users computers and securely backed up online. Folders in the Dropbox can also be shared with others, leading many businesses to abandon traditional network drives and VPNs.</p>'+
+'<p>Current Valuation = $10 billion</p>'+
+'<p>#4 Startup Valuation in San Francisco, CA</p>'+
+'<p>#10 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+
+var contentString5 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#5 Stripe</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="stripe2.png" style="max-width: 220px; float: right;">'+
+      '<p>Stripe is an online-payment system company that gives online merchants the ability to accept credit card payments. The company lets users build custom forms and makes sure all sensitive data is safe and secure.</p>'+
+'<p>Current Valuation = $5 billion</p>'+
+'<p>#5 Startup Valuation in San Francisco, CA</p>'+
+'<p>#18 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+          
+var contentString6 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#6 Zenefits</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="Zenefits2.png" style="max-width: 220px; float: right;">'+
+      '<p>Zenefits is a cloud HR automation platform. The companys mission: to make it effortless to manage your business and employees. Zenefits connects with (or helps set up) payroll, benefits, and other HR systems, so users can manage all HR online, in one dashboard.</p>'+
+'<p>Current Valuation = $4.5 billion</p>'+
+'<p>#6 Startup Valuation in San Francisco, CA</p>'+
+'<p>#21 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+          
+var contentString7 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#7 Cloudera</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="cloudera2.jpg" style="max-width: 220px; float: right;">'+
+      '<p>Cloudera is revolutionizing enterprise data management by offering the first unified Platform for Big Data, an enterprise data hub built on Apache Hadoop™. Cloudera offers enterprises one place to store, process and analyze all their data, empowering them to extend the value of existing investments while enabling fundamental new ways to derive value from their data.</p>'+
+'<p>Current Valuation = $4.1 billion</p>'+
+'<p>#7 Startup Valuation in San Francisco, CA</p>'+
+'<p>#22 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+          
+var contentString8 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#8 Social Finance (SoFi) </h1>'+
+      '<div id="bodyContent">'+
+      '<img src="sofi2.jpg" style="max-width: 220px; float: right;">'+
+      '<p>Social Finance (SoFi) connects students and alumni through a dedicated lending pool and an original social community. SoFi provides an approach where students, alumni and schools all benefit. Alumni earn a double bottom line return, students receive a lower loan rate than private or federal options, and both sides benefit from the connections formed. Schools access a new, stable, low cost funding source that doesnt cannibalize giving while building accountability to their students and alumni.</p>'+
+'<p>Current Valuation = $4 billion</p>'+
+'<p>#8 Startup Valuation in San Francisco, CA</p>'+
+'<p>#24 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+          
+var contentString9 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#9 Credit Karma</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="creditkarma2.jpg" style="max-width: 220px; float: right;">'+
+      '<p>Credit Karma is a consumer finance and technology company that provides more than 20 million consumers with free access to their credit scores, free monitoring of their credit and financial accounts, and more. Founded in 2008, Credit Karmas mission is to bring more transparency to the credit and finance space, while giving consumers data-driven recommendations that empower them to take charge of their financial health.</p>'+
+'<p>Current Valuation = $3.5 billion</p>'+
+'<p>#9 Startup Valuation in San Francisco, CA</p>'+
+'<p>#26 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+          
+var contentString10 = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h1 id="firstHeading" class="firstHeading">#10 Jawbone</h1>'+
+      '<div id="bodyContent">'+
+      '<img src="jawbone2.jpg" style="max-width: 220px; float: right;">'+
+      '<p>Jawbone, formerly Aliph, develops products and services for mobile devices such as headsets and wireless speakers. The company is the creator of JAMBOX and BIG JAMBOX wireless speakers, the Jawbone ERA and ICONTM Bluetooth headsets, and NoiseAssassin technology.</p>'+
+'<p>Current Valuation = $3.3 billion</p>'+
+'<p>#10 Startup Valuation in San Francisco, CA</p>'+
+'<p>#28 Startup Valuation in the World</p>'+
+      '</div>'+
+      '</div>';
+
+var infowindow1 = new google.maps.InfoWindow({
+      content: contentString1
+  });
+
+var infowindow2 = new google.maps.InfoWindow({
+      content: contentString2
+  });
+          
+var infowindow3 = new google.maps.InfoWindow({
+      content: contentString3
+  });
+          
+var infowindow4 = new google.maps.InfoWindow({
+      content: contentString4
+  });
+
+var infowindow5 = new google.maps.InfoWindow({
+      content: contentString5
+  });
+          
+var infowindow6 = new google.maps.InfoWindow({
+      content: contentString6
+  });
+          
+var infowindow7 = new google.maps.InfoWindow({
+      content: contentString7
+  });
+          
+var infowindow8 = new google.maps.InfoWindow({
+      content: contentString8
+  });
+          
+var infowindow9 = new google.maps.InfoWindow({
+      content: contentString9
+  });  
+
+var infowindow10 = new google.maps.InfoWindow({
+      content: contentString10
+  });
+
+var marker1 = new google.maps.Marker({
+    position: myLatlng1,
+    map: map,
+    title:"Uber",
+    animation: google.maps.Animation.DROP,
+    icon: image1
+        });
+
+var marker2 = new google.maps.Marker({
+    position: myLatlng2,
+    map: map,
+    title:"Airbnb",
+    animation: google.maps.Animation.DROP,
+    icon: image2
+        });
+
+var marker3 = new google.maps.Marker({
+    position: myLatlng3,
+    map: map,
+    title:"Pinterest",
+    animation: google.maps.Animation.DROP,
+    icon: image3
+        });
+          
+var marker4 = new google.maps.Marker({
+    position: myLatlng4,
+    map: map,
+    title:"Dropbox",
+    animation: google.maps.Animation.DROP,
+    icon: image4
+        });
+          
+var marker5 = new google.maps.Marker({
+    position: myLatlng5,
+    map: map,
+    title:"Stripe",
+    animation: google.maps.Animation.DROP,
+    icon: image5
+        });
+          
+var marker6 = new google.maps.Marker({
+    position: myLatlng6,
+    map: map,
+    title:"Zenefits",
+    animation: google.maps.Animation.DROP,
+    icon: image6
+        });
+          
+var marker7 = new google.maps.Marker({
+    position: myLatlng7,
+    map: map,
+    title:"Cloudera",
+    animation: google.maps.Animation.DROP,
+    icon: image7
+        });
+          
+var marker8 = new google.maps.Marker({
+    position: myLatlng8,
+    map: map,
+    title:"Social Finance",
+    animation: google.maps.Animation.DROP,
+    icon: image8
+        });
+          
+var marker9 = new google.maps.Marker({
+    position: myLatlng9,
+    map: map,
+    title:"Credit Karma",
+    animation: google.maps.Animation.DROP,
+    icon: image9
+        });
+          
+var marker10 = new google.maps.Marker({
+    position: myLatlng10,
+    map: map,
+    title:"Jawbone",
+    animation: google.maps.Animation.DROP,
+    icon: image10
+        });
+
+    google.maps.event.addListener(marker1, 'click', function() {
+    infowindow1.open(map,marker1);
+    infowindow2.close(map,marker2);
+    infowindow3.close(map,marker3);
+    infowindow4.close(map,marker4);
+    infowindow5.close(map,marker5);
+    infowindow6.close(map,marker6);
+    infowindow7.close(map,marker7);
+    infowindow8.close(map,marker8);
+    infowindow9.close(map,marker9);
+    infowindow10.close(map,marker10);
+  });
+
+   google.maps.event.addListener(marker2, 'click', function() {
+    infowindow2.open(map,marker2);
+    infowindow1.close(map,marker1);
+    infowindow3.close(map,marker3);
+    infowindow4.close(map,marker4);
+    infowindow5.close(map,marker5);
+    infowindow6.close(map,marker6);
+    infowindow7.close(map,marker7);
+    infowindow8.close(map,marker8);
+    infowindow9.close(map,marker9);
+    infowindow10.close(map,marker10);
+  });
+          
+google.maps.event.addListener(marker3, 'click', function() {
+    infowindow3.open(map,marker3);
+    infowindow2.close(map,marker2);
+    infowindow1.close(map,marker1);
+    infowindow4.close(map,marker4);
+    infowindow5.close(map,marker5);
+    infowindow6.close(map,marker6);
+    infowindow7.close(map,marker7);
+    infowindow8.close(map,marker8);
+    infowindow9.close(map,marker9);
+    infowindow10.close(map,marker10);
+  });
+          
+google.maps.event.addListener(marker4, 'click', function() {
+    infowindow4.open(map,marker4);
+    infowindow2.close(map,marker2);
+    infowindow3.close(map,marker3);
+    infowindow1.close(map,marker1);
+    infowindow5.close(map,marker5);
+    infowindow6.close(map,marker6);
+    infowindow7.close(map,marker7);
+    infowindow8.close(map,marker8);
+    infowindow9.close(map,marker9);
+    infowindow10.close(map,marker10);
+  });
+          
+google.maps.event.addListener(marker5, 'click', function() {
+    infowindow5.open(map,marker5);
+    infowindow2.close(map,marker2);
+    infowindow3.close(map,marker3);
+    infowindow4.close(map,marker4);
+    infowindow1.close(map,marker1);
+    infowindow6.close(map,marker6);
+    infowindow7.close(map,marker7);
+    infowindow8.close(map,marker8);
+    infowindow9.close(map,marker9);
+    infowindow10.close(map,marker10);
+  });
+          
+google.maps.event.addListener(marker6, 'click', function() {
+    infowindow6.open(map,marker6);
+    infowindow2.close(map,marker2);
+    infowindow3.close(map,marker3);
+    infowindow4.close(map,marker4);
+    infowindow5.close(map,marker5);
+    infowindow1.close(map,marker1);
+    infowindow7.close(map,marker7);
+    infowindow8.close(map,marker8);
+    infowindow9.close(map,marker9);
+    infowindow10.close(map,marker10);
+  });
+          
+google.maps.event.addListener(marker7, 'click', function() {
+    infowindow7.open(map,marker7);
+    infowindow2.close(map,marker2);
+    infowindow3.close(map,marker3);
+    infowindow4.close(map,marker4);
+    infowindow5.close(map,marker5);
+    infowindow6.close(map,marker6);
+    infowindow1.close(map,marker1);
+    infowindow8.close(map,marker8);
+    infowindow9.close(map,marker9);
+    infowindow10.close(map,marker10);
+  });
+          
+google.maps.event.addListener(marker8, 'click', function() {
+    infowindow8.open(map,marker8);
+    infowindow2.close(map,marker2);
+    infowindow3.close(map,marker3);
+    infowindow4.close(map,marker4);
+    infowindow5.close(map,marker5);
+    infowindow6.close(map,marker6);
+    infowindow7.close(map,marker7);
+    infowindow1.close(map,marker1);
+    infowindow9.close(map,marker9);
+    infowindow10.close(map,marker10);
+  });
+          
+google.maps.event.addListener(marker9, 'click', function() {
+    infowindow9.open(map,marker9);
+    infowindow2.close(map,marker2);
+    infowindow3.close(map,marker3);
+    infowindow4.close(map,marker4);
+    infowindow5.close(map,marker5);
+    infowindow6.close(map,marker6);
+    infowindow7.close(map,marker7);
+    infowindow8.close(map,marker8);
+    infowindow1.close(map,marker1);
+    infowindow10.close(map,marker10);
+  });
+          
+google.maps.event.addListener(marker10, 'click', function() {
+    infowindow10.open(map,marker10);
+    infowindow2.close(map,marker2);
+    infowindow3.close(map,marker3);
+    infowindow4.close(map,marker4);
+    infowindow5.close(map,marker5);
+    infowindow6.close(map,marker6);
+    infowindow7.close(map,marker7);
+    infowindow8.close(map,marker8);
+    infowindow9.close(map,marker9);
+    infowindow1.close(map,marker1);
+  });
+
+      }
+
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+  <body>
+      <header>
+<!--          <img src="unicorn-feature-1.jpg">-->
+      <h1>The Unicorn List</h1>
+      <h2>Top Private Startup Companies Based in San Francisco</h2>
+      <h2>Valued At $1B And Above</h2>
+      <h4>Unicorn is a term in the investment industry, and in particular the venture capital industry, which denotes a start-up company whose valuation has exceeded (the somewhat arbitrary) $1 billion dollars.</h4>
+    </header>
+    <div id="map-canvas"/>
+  </body>
+</html>

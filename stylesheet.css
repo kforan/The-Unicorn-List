@@ -1,0 +1,31 @@
+/*CSS stylesheet */
+
+body {
+    font-family: 'Palanquin Dark', sans-serif;
+    background-color: steelblue;
+    height: 100%; 
+}
+
+header {
+    text-align: center;  
+    background-color: rgba(255, 128, 0, 0.6);
+}
+
+h1 {
+    font-size: 38px;
+    color: darkblue;
+}
+h2 {   
+    color: white;
+}
+
+h4 {
+    font-style: italic;   
+    color: white;
+}
+
+img {
+    padding-left: 18px;
+    
+}
+
